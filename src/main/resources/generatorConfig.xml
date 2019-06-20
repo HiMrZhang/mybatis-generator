@@ -15,11 +15,11 @@
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
-        <javaModelGenerator targetPackage="com.easysoft.domain"
+        <javaModelGenerator targetPackage="${application.package}.common.domain"
                             targetProject="src/main/java"/>
-        <sqlMapGenerator targetPackage="com.easysoft.dao"
+        <sqlMapGenerator targetPackage="${application.package}.dao.mapper"
                          targetProject="src/main/resources"/>
-        <javaClientGenerator targetPackage="com.easysoft.dao"
+        <javaClientGenerator targetPackage="${application.package}.dao.mapper"
                              targetProject="src/main/java" type="XMLMAPPER"/>
         <table tableName="${db.tablename}"/>
     </context>
